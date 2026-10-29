@@ -1,0 +1,81 @@
+/* ─────────────────────────────────────────────
+   S Solutions — Global Styles
+   ───────────────────────────────────────────── */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base Resets ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #FDFBF7;
+  color: #1C2826;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "rlig" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100dvh;
+  line-height: 1.6;
+}
+
+/* ── Focus Visible ── */
+:focus-visible {
+  outline: 2px solid #2E6B4E;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Selection ── */
+::selection {
+  background-color: #2E6B4E22;
+  color: #1C2826;
+}
+
+/* ── Scrollbar (WebKit) ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F0EA;
+}
+::-webkit-scrollbar-thumb {
+  background: #E2DDD6;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2E6B4E;
+}
+
+/* ── Images ── */
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+/* ── Links (base reset — utility classes handle styling) ── */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── Headings — inherit display font ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+  font-weight: 700;
+  color: #1C2826;
+}
