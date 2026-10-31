@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useActionState } from "react";
 import { useFormStatus } from "react-dom";
@@ -93,7 +93,7 @@ export default function ContactForm() {
           {/* Name */}
           <div>
             <label htmlFor="contact-name" className={labelCls}>
-              Your Name
+              Your Name *
             </label>
             <input
               id="contact-name"
@@ -105,10 +105,39 @@ export default function ContactForm() {
             />
           </div>
 
+          {/* Email */}
+          <div>
+            <label htmlFor="contact-email" className={labelCls}>
+              Your Email Address *
+            </label>
+            <input
+              id="contact-email"
+              name="email"
+              type="email"
+              required
+              placeholder="you@company.com"
+              className={fieldCls}
+            />
+          </div>
+
+          {/* Phone / WhatsApp */}
+          <div>
+            <label htmlFor="contact-phone" className={labelCls}>
+              Phone / WhatsApp Number
+            </label>
+            <input
+              id="contact-phone"
+              name="phone"
+              type="tel"
+              placeholder="+91 98765 43210"
+              className={fieldCls}
+            />
+          </div>
+
           {/* Business */}
           <div>
             <label htmlFor="contact-business" className={labelCls}>
-              Business / Company
+              Business / Brand Name
             </label>
             <input
               id="contact-business"
@@ -122,7 +151,7 @@ export default function ContactForm() {
           {/* Service */}
           <div>
             <label htmlFor="contact-service" className={labelCls}>
-              Service Interested In
+              Service Interested In *
             </label>
             <select
               id="contact-service"
@@ -134,12 +163,12 @@ export default function ContactForm() {
               <option value="" disabled>
                 Select a service…
               </option>
-              <option value="#website-development">Website Development</option>
-              <option value="#shopify-ecommerce">Shopify &amp; E-commerce</option>
-              <option value="#shopify-landing-page">Shopify Landing Page</option>
-              <option value="#custom-web-app">Custom Web Application</option>
-              <option value="#maintenance-redesign">Maintenance &amp; Redesign</option>
-              <option value="#not-sure">Not sure yet</option>
+              <option value="Website Development">Website Development</option>
+              <option value="Shopify & E-commerce">Shopify &amp; E-commerce</option>
+              <option value="Shopify Landing Page">Shopify Landing Page</option>
+              <option value="Custom Web Application">Custom Web Application</option>
+              <option value="Maintenance & Redesign">Maintenance &amp; Redesign</option>
+              <option value="Not sure yet">Not sure yet</option>
             </select>
           </div>
 
@@ -157,11 +186,11 @@ export default function ContactForm() {
               <option value="" disabled>
                 Select a range…
               </option>
-              <option value="under-5k">Under ₹5,000</option>
-              <option value="5k-15k">₹5,000 – ₹15,000</option>
-              <option value="15k-30k">₹15,000 – ₹30,000</option>
-              <option value="30k-plus">₹30,000+</option>
-              <option value="flexible">Flexible / Not sure</option>
+              <option value="Under ₹5,000 ($60)">Under ₹5,000 ($60)</option>
+              <option value="₹5,000 – ₹15,000 ($60 – $185)">₹5,000 – ₹15,000 ($60 – $185)</option>
+              <option value="₹15,000 – ₹30,000 ($185 – $400)">₹15,000 – ₹30,000 ($185 – $400)</option>
+              <option value="₹30,000+ ($400+)">₹30,000+ ($400+)</option>
+              <option value="Flexible / Not sure">Flexible / Not sure</option>
             </select>
           </div>
 

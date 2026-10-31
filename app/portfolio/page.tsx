@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Star } from "lucide-react";
 import { WHATSAPP_URL } from "@/lib/constants";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -8,51 +8,105 @@ import { WHATSAPP_URL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
-    "Real projects built and shipped by S Solutions — AttendanceLive, CourierPortal, and Chaudhary Kennel.",
+    "Real Shopify stores and web projects built by S Solutions — Petszyy, Hetriv, Shritoys, Asees Global, and Japansh Mart.",
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  Project data
+//  Project data — 5 real client stores
 // ─────────────────────────────────────────────────────────────────────────────
 const PROJECTS = [
   {
-    slug: "attendancelive",
-    name: "AttendanceLive",
-    tagline:
-      "Real-time staff attendance tracking — built for daily operational use.",
+    slug: "petszyy",
+    name: "Petszyy",
+    url: "https://petszyy.com",
+    tagline: "Pet products Shopify store — designed for conversion from day one.",
+    type: "Shopify E-commerce",
     problem:
-      "The client needed a reliable way to track attendance across multiple staff members without paper registers or manual spreadsheets.",
-    role: "Full-stack development, database design, deployment.",
-    stack: ["Next.js", "Node.js", "PostgreSQL", "AWS EC2"],
+      "The client had a product line ready but no online presence. They needed a fully functional, professional Shopify store that could handle sales immediately after launch.",
+    role: "Full Shopify store setup — theme customisation, product catalogue, collections, payment gateway, and shipping configuration.",
+    stack: ["Shopify", "Liquid", "Custom Sections", "Theme Dev"],
     outcome:
-      "System is live and in daily use. Handles real-time check-ins, generates monthly reports, and reduced tracking overhead significantly.",
+      "Store launched on time and began processing orders in the first week. The client now manages their own products independently with zero ongoing tech overhead.",
+    review: {
+      quote: "They set everything up perfectly. The store looks great and my customers love the experience. Very professional team.",
+      author: "Petszyy Owner",
+    },
     status: "Live",
     year: "2024",
   },
   {
-    slug: "courierportal",
-    name: "CourierPortal",
-    tagline:
-      "End-to-end courier management dashboard for operations teams.",
+    slug: "hetriv",
+    name: "Hetriv",
+    url: "https://hetriv.com",
+    tagline: "Custom Shopify store with a tailored delivery section order flow.",
+    type: "Shopify E-commerce",
     problem:
-      "The business was managing orders through WhatsApp and Excel. They needed a central dashboard to track pickups, deliveries, and status updates.",
-    role: "Frontend & backend development, UI design, API integration.",
-    stack: ["React", "Laravel", "MySQL", "REST API"],
+      "The client needed a Shopify store with a non-standard delivery section ordering system that didn't exist out-of-the-box. Standard themes couldn't handle their fulfilment workflow.",
+    role: "Shopify store build with custom section development, Studio theme customisation, and a bespoke delivery ordering flow.",
+    stack: ["Shopify", "Studio Theme", "Custom Liquid Sections", "JavaScript"],
     outcome:
-      "Operational efficiency improved with real-time order tracking, driver assignment, and automated status notifications.",
+      "The custom delivery section works seamlessly within Shopify's native checkout — no third-party apps. Store is live and operating daily.",
+    review: {
+      quote: "The team understood exactly what we needed even when it was hard to explain. The custom delivery flow works perfectly.",
+      author: "Hetriv Team",
+    },
     status: "Live",
     year: "2024",
   },
   {
-    slug: "chaudhary-kennel",
-    name: "Kennel Portfolio",
-    tagline: "Business website with breed showcase and inquiry system.",
+    slug: "shritoys",
+    name: "Shritoys",
+    url: "https://shritoys.com",
+    tagline: "Children's toy store — catalogue-first Shopify store built for families.",
+    type: "Shopify E-commerce",
     problem:
-      "The kennel had no online presence. Customers had to contact them through word of mouth with no way to view available dogs or submit inquiries.",
-    role: "Website design and development, contact form integration, SEO setup.",
-    stack: ["Next.js", "Tailwind CSS", "Nodemailer"],
+      "A toy retailer wanted to move their business online but had no digital experience. They needed a clean, trustworthy store that parents would feel comfortable buying from.",
+    role: "End-to-end Shopify store — product uploads, collections, mobile-optimised theme, and checkout setup.",
+    stack: ["Shopify", "Studio Theme", "E-commerce Setup", "Mobile Optimisation"],
     outcome:
-      "Online inquiries started coming in within the first week of launch. The breed listing page became the primary lead source.",
+      "Store launched with a full product catalogue. The mobile-first design reflects the client's customer base — most of their traffic comes from phones.",
+    review: {
+      quote: "We had zero experience with online selling. They handled everything and now our store runs itself. Extremely happy.",
+      author: "Shritoys Owner",
+    },
+    status: "Live",
+    year: "2024",
+  },
+  {
+    slug: "aseesglobal",
+    name: "Asees Global",
+    url: "https://aseesglobal.com",
+    tagline: "Global B2B Shopify store — built for wholesale and international buyers.",
+    type: "Shopify E-commerce",
+    problem:
+      "The client sells globally and needed a Shopify store that could handle international customers, multiple product categories, and look trustworthy to wholesale buyers from the US and beyond.",
+    role: "Shopify store setup using the Trade theme — optimised for B2B, with multi-category product organisation and international payment support.",
+    stack: ["Shopify", "Trade Theme", "B2B Setup", "International Payments"],
+    outcome:
+      "The store now serves international buyers with full checkout support for USD. The Trade theme gives it a premium, wholesale feel that converts commercial buyers.",
+    review: {
+      quote: "Our store looks very professional and international buyers trust it. The team delivered exactly what a global store needs.",
+      author: "Asees Global Team",
+    },
+    status: "Live",
+    year: "2024",
+  },
+  {
+    slug: "japanshmart",
+    name: "Japansh Mart",
+    url: "https://japanshmart.com",
+    tagline: "Japanese products mart — a curated Shopify store with a distinct cultural identity.",
+    type: "Shopify E-commerce",
+    problem:
+      "The client wanted to sell authentic Japanese products in India but needed a store that captured the aesthetic and cultural feel of Japanese retail — not just a generic Shopify template.",
+    role: "Shopify store design and development using the Craft theme — with product curation, cultural branding touches, and collection organisation.",
+    stack: ["Shopify", "Craft Theme", "Branding", "Product Curation"],
+    outcome:
+      "The store has a unique identity that stands out in its niche. Customers frequently comment on the clean, Japan-inspired look and feel of the storefront.",
+    review: {
+      quote: "I wanted the store to feel Japanese, not just sell Japanese things. They nailed it. The design is exactly what I imagined.",
+      author: "Japansh Mart Owner",
+    },
     status: "Live",
     year: "2024",
   },
@@ -79,9 +133,9 @@ function WhatsAppIcon({ className = "h-5 w-5" }: { className?: string }) {
 // ─────────────────────────────────────────────────────────────────────────────
 function PageHero() {
   const stats = [
-    { value: "3", label: "Live Projects" },
-    { value: "3", label: "Happy Clients" },
-    { value: "100%", label: "Production Deployed" },
+    { value: "20+", label: "Clients Delivered" },
+    { value: "15+", label: "Shopify Stores Built" },
+    { value: "100%", label: "Client Satisfaction" },
   ];
 
   return (
@@ -95,7 +149,7 @@ function PageHero() {
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
         {/* Eyebrow */}
         <p className="text-xs font-semibold text-muted uppercase tracking-widest mb-5">
-          Our Work
+          Proven Track Record
         </p>
 
         {/* H1 */}
@@ -106,8 +160,7 @@ function PageHero() {
 
         {/* Subtext */}
         <p className="text-muted text-lg max-w-2xl leading-relaxed mb-12">
-          Every project below is live, used by real people, and was built by our
-          team from the ground up.
+          We have built and shipped solutions for over <strong>20+ clients worldwide</strong>, including <strong>15+ custom Shopify stores</strong>. Below is a deep dive into 5 of our flagship client stores with real reviews.
         </p>
 
         {/* Stats row */}
@@ -142,13 +195,25 @@ function PageHero() {
 function LiveBadge() {
   return (
     <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3.5 py-1.5 text-sm font-medium text-accent">
-      {/* Pulsing dot */}
       <span className="relative flex h-2 w-2 shrink-0">
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-60" />
         <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
       </span>
       Live
     </span>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  Star rating display
+// ─────────────────────────────────────────────────────────────────────────────
+function StarRating() {
+  return (
+    <div className="flex items-center gap-0.5" aria-label="5 out of 5 stars">
+      {[...Array(5)].map((_, i) => (
+        <Star key={i} className="h-4 w-4 fill-accent text-accent" />
+      ))}
+    </div>
   );
 }
 
@@ -183,13 +248,27 @@ function ProjectSection({
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         {/* ── Top bar ── */}
-        <div className="flex flex-wrap items-start justify-between gap-4 mb-10">
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-text">
-            {project.name}
-          </h2>
+        <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
+          <div>
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-text">
+              {project.name}
+            </h2>
+            <p className="text-xs text-muted mt-1 uppercase tracking-widest">
+              {project.type}
+            </p>
+          </div>
           <div className="flex items-center gap-3">
             <LiveBadge />
             <span className="text-sm text-muted">{project.year}</span>
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-3.5 py-1.5 text-xs font-medium text-muted hover:border-accent hover:text-accent transition-all duration-200"
+            >
+              Visit site
+              <ExternalLink className="h-3 w-3" />
+            </a>
           </div>
         </div>
 
@@ -205,11 +284,11 @@ function ProjectSection({
             {contentBlocks.map((block, blockIdx) => (
               <div
                 key={block.label}
-                className={[
+                className={
                   blockIdx < contentBlocks.length - 1
                     ? "border-b border-border pb-6 mb-6"
-                    : "mb-8",
-                ].join(" ")}
+                    : "mb-8"
+                }
               >
                 <p className="text-xs font-semibold text-muted uppercase tracking-widest mb-2">
                   {block.label}
@@ -233,10 +312,10 @@ function ProjectSection({
             </a>
           </div>
 
-          {/* Right: placeholder image + stack tags */}
-          <div className="lg:col-span-2">
+          {/* Right: placeholder image + stack + review */}
+          <div className="lg:col-span-2 flex flex-col gap-5">
             {/* Placeholder image area */}
-            <div className="relative h-56 lg:h-72 rounded-2xl bg-surface border border-border overflow-hidden flex items-center justify-center">
+            <div className="relative h-56 lg:h-64 rounded-2xl bg-surface border border-border overflow-hidden flex items-center justify-center">
               {/* Dot-grid background */}
               <div
                 aria-hidden="true"
@@ -247,8 +326,7 @@ function ProjectSection({
                   backgroundSize: "22px 22px",
                 }}
               />
-
-              {/* Subtle radial gradient wash */}
+              {/* Radial gradient wash */}
               <div
                 aria-hidden="true"
                 className="absolute inset-0"
@@ -257,17 +335,20 @@ function ProjectSection({
                     "radial-gradient(ellipse at center, rgba(46,107,78,0.04) 0%, transparent 70%)",
                 }}
               />
-
               {/* Center label */}
               <div className="relative z-10 flex flex-col items-center gap-2 text-center px-6">
                 <span className="font-display font-bold text-xl text-accent">
                   {project.name}
                 </span>
-                <span className="text-xs text-muted/50 uppercase tracking-widest">
-                  Screenshot placeholder
-                </span>
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-muted/60 hover:text-accent transition-colors duration-200 uppercase tracking-widest"
+                >
+                  {project.url.replace("https://", "")} ↗
+                </a>
               </div>
-
               {/* Corner accent */}
               <div
                 aria-hidden="true"
@@ -276,7 +357,7 @@ function ProjectSection({
             </div>
 
             {/* Stack tags */}
-            <div className="flex flex-wrap gap-2 mt-4">
+            <div className="flex flex-wrap gap-2">
               {project.stack.map((tag) => (
                 <span
                   key={tag}
@@ -286,7 +367,111 @@ function ProjectSection({
                 </span>
               ))}
             </div>
+
+            {/* Client review card */}
+            <div className="rounded-2xl border border-border bg-surface p-6 shadow-card">
+              <StarRating />
+              <blockquote className="mt-3 text-sm text-text leading-relaxed italic">
+                &ldquo;{project.review.quote}&rdquo;
+              </blockquote>
+              <p className="mt-3 text-xs font-semibold text-muted uppercase tracking-wide">
+                — {project.review.author}
+              </p>
+            </div>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  Maintenance spotlight section
+// ─────────────────────────────────────────────────────────────────────────────
+function MaintenanceSpotlight() {
+  const benefits = [
+    {
+      title: "Bug Fixes & Patches",
+      desc: "Fast turnaround on any issues — broken pages, checkout errors, or display bugs fixed without delay.",
+    },
+    {
+      title: "Performance Optimisation",
+      desc: "Speed audits, image compression, theme code cleanup — keeping your store fast for every visitor.",
+    },
+    {
+      title: "Content & Product Updates",
+      desc: "New products, banners, copy changes, seasonal collections — handled for you so you stay focused on selling.",
+    },
+    {
+      title: "Shopify App Management",
+      desc: "Installing, configuring, or removing apps without breaking your store's existing setup.",
+    },
+    {
+      title: "Security & Uptime Monitoring",
+      desc: "Proactive checks to make sure your store is always accessible and your customers' data stays protected.",
+    },
+    {
+      title: "UI / UX Improvements",
+      desc: "Ongoing refinements — better mobile layouts, clearer CTAs, improved checkout flow — based on what's working.",
+    },
+  ];
+
+  return (
+    <section className="bg-surface py-24 border-t border-border">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        {/* Header */}
+        <div className="max-w-2xl mb-16">
+          <p className="text-xs font-semibold text-muted uppercase tracking-widest mb-4">
+            Ongoing Support
+          </p>
+          <h2 className="font-display font-bold text-4xl md:text-5xl text-text leading-tight mb-6">
+            We Don&apos;t Just Build &amp; Leave
+          </h2>
+          <p className="text-muted text-lg leading-relaxed">
+            Several of the stores above are on our maintenance plan. Once your
+            store is live, keeping it fast, updated, and earning is a separate
+            job — and we do that too.
+          </p>
+        </div>
+
+        {/* Benefits grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+          {benefits.map((b) => (
+            <div
+              key={b.title}
+              className="rounded-2xl bg-bg border border-border p-6 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 mb-4">
+                <span className="h-2 w-2 rounded-full bg-accent" />
+              </div>
+              <h3 className="font-display font-bold text-lg text-text mb-2">
+                {b.title}
+              </h3>
+              <p className="text-muted text-sm leading-relaxed">{b.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Pricing note + CTA */}
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 rounded-2xl bg-bg border border-border p-8">
+          <div>
+            <p className="font-display font-bold text-2xl text-text mb-1">
+              Maintenance from <span className="text-accent">₹4,999 / mo</span>
+            </p>
+            <p className="text-muted text-sm">
+              No lock-in. Cancel anytime. Priority response for active clients.
+            </p>
+          </div>
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            id="maintenance-cta"
+            className="shrink-0 inline-flex items-center gap-2.5 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-white shadow-md transition-all duration-200 hover:bg-accentHov hover:shadow-lg hover:-translate-y-px active:translate-y-0"
+          >
+            <WhatsAppIcon className="h-4 w-4" />
+            Ask about maintenance
+          </a>
         </div>
       </div>
     </section>
@@ -342,6 +527,7 @@ export default function PortfolioPage() {
           isLast={idx === PROJECTS.length - 1}
         />
       ))}
+      <MaintenanceSpotlight />
       <CtaBand />
     </>
   );

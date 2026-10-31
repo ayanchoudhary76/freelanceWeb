@@ -52,24 +52,32 @@ export const PRICING: {
   fullPrice: number;
   introPrice: number;
   currency: string;
+  usdFullPrice: number;
+  usdIntroPrice: number;
 }[] = [
   {
     name: "Landing / Product Page",
     fullPrice: 4000,
     introPrice: 2999,
     currency: "₹",
+    usdFullPrice: 60,
+    usdIntroPrice: 45,
   },
   {
     name: "Shopify Store",
     fullPrice: 15000,
     introPrice: 12999,
     currency: "₹",
+    usdFullPrice: 220,
+    usdIntroPrice: 185,
   },
   {
     name: "Custom Website",
     fullPrice: 25000,
     introPrice: 21999,
     currency: "₹",
+    usdFullPrice: 499,
+    usdIntroPrice: 400,
   },
 ];
 

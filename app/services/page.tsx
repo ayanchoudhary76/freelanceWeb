@@ -41,7 +41,7 @@ const SERVICES_DETAIL: {
     id: "website-development",
     icon: "Globe",
     timeline: "1–2 weeks",
-    startingPrice: "₹21,999",
+    startingPrice: "₹21,999 ($400)",
     includes: [
       "Custom responsive design",
       "Up to 5 pages",
@@ -56,7 +56,7 @@ const SERVICES_DETAIL: {
     id: "shopify-ecommerce",
     icon: "ShoppingBag",
     timeline: "2–3 weeks",
-    startingPrice: "₹12,999",
+    startingPrice: "₹12,999 ($185)",
     includes: [
       "Full Shopify store setup",
       "Product catalog (up to 20 items)",
@@ -71,7 +71,7 @@ const SERVICES_DETAIL: {
     id: "shopify-landing-page",
     icon: "Layers",
     timeline: "5–7 days",
-    startingPrice: "₹2,999",
+    startingPrice: "₹2,999 ($45)",
     includes: [
       "Single high-converting page",
       "Custom sections & layout",
@@ -100,15 +100,15 @@ const SERVICES_DETAIL: {
   {
     id: "maintenance-redesign",
     icon: "Wrench",
-    timeline: "Ongoing / project-based",
-    startingPrice: "₹4,999 / mo",
+    timeline: "Ongoing / monthly",
+    startingPrice: "₹4,999 / mo ($65 / mo)",
     includes: [
-      "Bug fixes & patches",
-      "Performance optimisation",
-      "Content updates",
-      "Security monitoring",
-      "UI/UX improvements",
-      "Priority support",
+      "Bug fixes & immediate patches",
+      "Shopify app conflict & theme audits",
+      "Speed & Core Web Vitals optimization",
+      "Product catalogue & banner updates",
+      "Security monitoring & backups",
+      "Priority 2-hour WhatsApp support",
     ],
     cta: "Get ongoing support",
   },
@@ -253,11 +253,24 @@ function ServiceSection({
                 ))}
               </ul>
 
-              {/* Fine print */}
-              <p className="mt-4 border-t border-border pt-4 text-xs leading-relaxed text-muted/70">
-                Extra pages, integrations, or custom features are quoted
-                separately.
-              </p>
+              {/* Fine print or Maintenance Callout */}
+              {service.id === "maintenance-redesign" ? (
+                <div className="mt-5 border-t border-border pt-4">
+                  <div className="rounded-xl bg-accent/5 border border-accent/20 p-4">
+                    <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-1">
+                      ⭐ Dedicated Shopify &amp; Web Support
+                    </p>
+                    <p className="text-xs text-muted leading-relaxed">
+                      Zero lock-in contracts. Cancel or pause anytime. Includes a direct WhatsApp channel with our developers for fast resolution within hours.
+                    </p>
+                  </div>
+                </div>
+              ) : (
+                <p className="mt-4 border-t border-border pt-4 text-xs leading-relaxed text-muted/70">
+                  Extra pages, integrations, or custom features are quoted
+                  separately.
+                </p>
+              )}
             </div>
           </div>
         </div>

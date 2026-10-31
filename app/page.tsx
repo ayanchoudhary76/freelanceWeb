@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Check, Rocket, BadgeCheck, Timer } from "lucide-react";
+import { Check, Rocket, BadgeCheck, Timer, Star, Wrench, ShieldCheck, Zap } from "lucide-react";
 import { SERVICES, PRICING, WHATSAPP_URL } from "@/lib/constants";
 
 // ─────────────────────────────────────────────────────────────
@@ -133,21 +133,23 @@ function HeroSection() {
                     Live Right Now
                   </span>
                 </div>
-                <span className="text-xs text-muted/60">↑ 3 projects</span>
+                <span className="text-xs text-muted/60">↑ 15+ stores</span>
               </div>
 
               <p className="font-display font-bold text-3xl text-text">
-                3 Live Projects
+                15+ Live Stores
               </p>
               <p className="text-sm text-muted mt-1.5">
-                In production. Used by real users daily.
+                In production. Taking real orders daily.
               </p>
 
-              <div className="mt-5 space-y-2">
+              <div className="mt-5 space-y-2.5">
                 {[
-                  { name: "AttendanceLive", pct: "100%" },
-                  { name: "CourierPortal", pct: "100%" },
-                  { name: "Chaudhary Kennel", pct: "100%" },
+                  { name: "Petszyy.com", pct: "100%" },
+                  { name: "Hetriv.com", pct: "100%" },
+                  { name: "Shritoys.com", pct: "100%" },
+                  { name: "AseesGlobal.com", pct: "100%" },
+                  { name: "Japanshmart.com", pct: "100%" },
                 ].map((p) => (
                   <div key={p.name} className="flex items-center gap-3">
                     <div className="flex-1 h-1.5 rounded-full bg-border overflow-hidden">
@@ -156,7 +158,7 @@ function HeroSection() {
                         style={{ width: p.pct }}
                       />
                     </div>
-                    <span className="text-xs text-muted w-28 truncate">{p.name}</span>
+                    <span className="text-xs font-medium text-text w-32 truncate">{p.name}</span>
                   </div>
                 ))}
               </div>
@@ -318,52 +320,107 @@ function WhyUsSection() {
 // ─────────────────────────────────────────────────────────────
 const PROJECTS = [
   {
-    slug: "attendancelive",
-    name: "AttendanceLive",
-    desc: "Real-time staff attendance tracking system.",
-    tags: ["Next.js", "Node.js", "AWS"],
+    slug: "petszyy",
+    name: "Petszyy",
+    desc: "Full Shopify store for a pet products brand — theme, products, and checkout.",
+    url: "https://petszyy.com",
+    tags: ["Shopify", "E-commerce", "Theme Dev"],
   },
   {
-    slug: "courierportal",
-    name: "CourierPortal",
-    desc: "End-to-end courier management dashboard.",
-    tags: ["React", "Laravel", "MySQL"],
+    slug: "hetriv",
+    name: "Hetriv",
+    desc: "Custom Shopify store with delivery section ordering and tailored UI.",
+    url: "https://hetriv.com",
+    tags: ["Shopify", "Custom Sections", "Studio Theme"],
   },
   {
-    slug: "chaudhary-kennel",
-    name: "Kennel Portfolio",
-    desc: "Kennel business website with breed listings & inquiry flow.",
-    tags: ["Next.js", "Tailwind"],
+    slug: "shritoys",
+    name: "Shritoys",
+    desc: "Children's toy store on Shopify — product catalogue, collections & checkout.",
+    url: "https://shritoys.com",
+    tags: ["Shopify", "E-commerce", "Studio Theme"],
+  },
+  {
+    slug: "aseesglobal",
+    name: "Asees Global",
+    desc: "Global B2B Shopify store built for wholesale and international buyers.",
+    url: "https://aseesglobal.com",
+    tags: ["Shopify", "Trade Theme", "B2B Setup"],
+  },
+  {
+    slug: "japanshmart",
+    name: "Japansh Mart",
+    desc: "Curated Japanese products mart with bespoke cultural design.",
+    url: "https://japanshmart.com",
+    tags: ["Shopify", "Craft Theme", "Branding"],
+  },
+];
+
+const REVIEWS = [
+  {
+    client: "Petszyy",
+    author: "Petszyy Store Owner",
+    role: "Pet Supplies Brand",
+    url: "https://petszyy.com",
+    quote: "They set everything up perfectly. The store looks great and my customers love the checkout experience. Very professional team.",
+  },
+  {
+    client: "Hetriv",
+    author: "Hetriv Management",
+    role: "Custom E-commerce Store",
+    url: "https://hetriv.com",
+    quote: "The team understood exactly what we needed even when it was hard to explain. The custom delivery flow works without any issues.",
+  },
+  {
+    client: "Shritoys",
+    author: "Shritoys Founder",
+    role: "Kids & Toys Retailer",
+    url: "https://shritoys.com",
+    quote: "We had zero experience with online selling. They handled everything and now our store runs smoothly. Extremely happy with their work.",
+  },
+  {
+    client: "Asees Global",
+    author: "Asees Global Team",
+    role: "International Wholesale",
+    url: "https://aseesglobal.com",
+    quote: "Our store looks very professional and international buyers trust it. The team delivered exactly what a global Shopify store needs.",
+  },
+  {
+    client: "Japansh Mart",
+    author: "Japansh Mart Owner",
+    role: "Curated Japanese Products",
+    url: "https://japanshmart.com",
+    quote: "I wanted the store to feel authentically Japanese, not just sell Japanese items. They nailed it. The design is exactly what I wanted.",
   },
 ];
 
 function PortfolioSection() {
   return (
-    <section id="portfolio" className="bg-bg py-24">
+    <section id="portfolio" className="bg-bg py-24 border-b border-border">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         {/* Header — left aligned */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
           <div>
-            <p className="text-xs font-semibold text-muted uppercase tracking-widest mb-3">
-              Case Studies
-            </p>
+            <div className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/5 px-3.5 py-1.5 text-xs font-semibold text-accent uppercase tracking-wider mb-3">
+              20+ Clients Served · 15+ Shopify Stores
+            </div>
             <h2 className="font-display font-bold text-4xl md:text-5xl text-text">
-              Featured Work
+              Featured Client Stores
             </h2>
             <p className="text-muted text-lg mt-3">
-              A few of the systems we've built and shipped.
+              We&apos;ve worked with 20+ clients worldwide, shipping 15+ custom Shopify stores and web platforms. Here are 5 featured live stores:
             </p>
           </div>
           <Link
             href="/portfolio"
             className="shrink-0 text-sm font-medium text-accent hover:text-accentHov border-b border-accent/30 pb-0.5 hover:border-accent transition-colors duration-200"
           >
-            View all work →
+            View all work &amp; reviews →
           </Link>
         </div>
 
         {/* Project Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {PROJECTS.map((project) => (
             <div
               key={project.slug}
@@ -386,7 +443,7 @@ function PortfolioSection() {
                     {project.name}
                   </span>
                   <span className="text-xs text-muted uppercase tracking-widest">
-                    Live Project
+                    Live Shopify Store
                   </span>
                 </div>
                 {/* Corner accent */}
@@ -417,19 +474,210 @@ function PortfolioSection() {
                   ))}
                 </div>
 
-                {/* Link */}
-                <div className="mt-auto">
+                {/* Links */}
+                <div className="mt-auto flex items-center gap-4">
                   <Link
                     href={`/portfolio#${project.slug}`}
                     className="inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-all duration-200 group-hover:gap-2.5"
                   >
-                    View case study
+                    Case study
                     <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">→</span>
                   </Link>
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs text-muted hover:text-accent transition-colors duration-200"
+                  >
+                    Visit site ↗
+                  </a>
                 </div>
               </div>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+//  4.5 Client Testimonials Section
+// ─────────────────────────────────────────────────────────────
+function TestimonialsSection() {
+  return (
+    <section className="bg-surface py-24 border-b border-border">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <p className="text-xs font-semibold text-muted uppercase tracking-widest mb-3">
+            Client Feedback
+          </p>
+          <h2 className="font-display font-bold text-4xl md:text-5xl text-text mb-4">
+            Satisfied Store Owners
+          </h2>
+          <p className="text-muted text-lg">
+            Every business we&apos;ve worked with is actively running their store. Here is what they say about our work.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {REVIEWS.map((r) => (
+            <div
+              key={r.client}
+              className="flex flex-col justify-between rounded-2xl bg-bg border border-border p-7 shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1"
+            >
+              <div>
+                {/* 5 Stars */}
+                <div className="flex items-center gap-1 mb-4" aria-label="5 out of 5 stars">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-accent text-accent" />
+                  ))}
+                </div>
+
+                <blockquote className="text-text text-sm leading-relaxed italic mb-6">
+                  &ldquo;{r.quote}&rdquo;
+                </blockquote>
+              </div>
+
+              <div className="border-t border-border pt-4 flex items-center justify-between">
+                <div>
+                  <p className="font-display font-bold text-sm text-text">
+                    {r.author}
+                  </p>
+                  <p className="text-xs text-muted">{r.role}</p>
+                </div>
+                <a
+                  href={r.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-medium text-accent hover:text-accentHov transition-colors"
+                >
+                  {r.client} ↗
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+//  4.8 Dedicated Maintenance Section
+// ─────────────────────────────────────────────────────────────
+function MaintenanceSection() {
+  const points = [
+    {
+      title: "Bug Fixes & Speed Tuning",
+      desc: "Immediate fixes for checkout glitches, broken layouts, and slow loading times.",
+      icon: Zap,
+    },
+    {
+      title: "Shopify Apps & Theme Audits",
+      desc: "Safely test, install, or remove apps without breaking your store's theme.",
+      icon: Wrench,
+    },
+    {
+      title: "Catalogue & Banners Updated",
+      desc: "New collection drops, seasonal promotional banners, and product pricing changes.",
+      icon: ShieldCheck,
+    },
+  ];
+
+  return (
+    <section id="maintenance" className="bg-bg py-24 border-b border-border">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <div className="rounded-3xl bg-surface border border-border p-8 lg:p-14 shadow-card">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            {/* Left pitch */}
+            <div className="lg:col-span-7 space-y-6">
+              <span className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/5 px-3.5 py-1.5 text-xs font-semibold text-accent uppercase tracking-widest">
+                <Wrench className="h-3.5 w-3.5" />
+                Ongoing Support &amp; Redesign
+              </span>
+
+              <h2 className="font-display font-bold text-3xl md:text-5xl text-text leading-tight">
+                Focus on sales. We&apos;ll handle the maintenance.
+              </h2>
+
+              <p className="text-muted text-base lg:text-lg leading-relaxed">
+                Most websites lose visitors because of unoptimized code, slow load times, and broken mobile elements. Our dedicated maintenance plan keeps your store fast, secure, and always converting.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                {points.map((pt) => {
+                  const Icon = pt.icon;
+                  return (
+                    <div key={pt.title} className="rounded-xl bg-bg border border-border p-4">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent/10 mb-3">
+                        <Icon className="h-4 w-4 text-accent" />
+                      </div>
+                      <h4 className="font-semibold text-sm text-text mb-1">{pt.title}</h4>
+                      <p className="text-xs text-muted leading-relaxed">{pt.desc}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Right pricing card */}
+            <div className="lg:col-span-5">
+              <div className="rounded-2xl bg-bg border-2 border-accent p-8 shadow-card flex flex-col justify-between">
+                <div>
+                  <div className="inline-block rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent mb-4">
+                    Maintenance Plan
+                  </div>
+                  <h3 className="font-display font-bold text-2xl text-text mb-2">
+                    Ongoing Store Care
+                  </h3>
+                  <p className="text-xs text-muted mb-6">
+                    Monthly subscription · Zero lock-in contracts · Pause or cancel anytime
+                  </p>
+
+                  <div className="flex items-baseline gap-2 mb-1">
+                    <span className="font-display text-4xl font-bold text-text">
+                      ₹4,999
+                    </span>
+                    <span className="text-muted text-sm">/ month</span>
+                  </div>
+
+                  <p className="text-xs text-muted/70 mb-6">
+                    Foreign clients: <span className="text-accent font-semibold">$65 / mo</span>
+                  </p>
+
+                  <ul className="space-y-3 mb-8 text-sm text-muted">
+                    <li className="flex items-center gap-2.5">
+                      <Check className="h-4 w-4 text-accent shrink-0" />
+                      Priority 2-hour WhatsApp emergency response
+                    </li>
+                    <li className="flex items-center gap-2.5">
+                      <Check className="h-4 w-4 text-accent shrink-0" />
+                      Theme backups &amp; security monitoring
+                    </li>
+                    <li className="flex items-center gap-2.5">
+                      <Check className="h-4 w-4 text-accent shrink-0" />
+                      Speed audits &amp; mobile checkups
+                    </li>
+                    <li className="flex items-center gap-2.5">
+                      <Check className="h-4 w-4 text-accent shrink-0" />
+                      Monthly content, banner &amp; catalogue updates
+                    </li>
+                  </ul>
+                </div>
+
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2.5 rounded-full bg-accent py-3.5 text-sm font-semibold text-white shadow-md hover:bg-accentHov transition-all duration-200"
+                >
+                  <WhatsAppIcon className="h-4 w-4" />
+                  Inquire About Maintenance
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -527,6 +775,11 @@ function PricingSection() {
                     {tier.introPrice.toLocaleString("en-IN")}
                   </span>
                 </div>
+                {/* USD equivalent for foreign clients */}
+                <p className="text-xs text-muted/70 mb-2">
+                  Foreign clients: <span className="line-through text-muted/50">${tier.usdFullPrice}</span>{" "}
+                  <span className="text-accent font-semibold">${tier.usdIntroPrice}</span>
+                </p>
                 <p className="text-xs text-accent font-medium mb-8">
                   Intro price for first 10 clients
                 </p>
@@ -616,6 +869,8 @@ export default function Home() {
       <ServicesSection />
       <WhyUsSection />
       <PortfolioSection />
+      <TestimonialsSection />
+      <MaintenanceSection />
       <PricingSection />
       <CtaBand />
     </>
